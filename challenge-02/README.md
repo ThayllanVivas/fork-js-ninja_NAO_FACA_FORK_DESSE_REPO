@@ -31,7 +31,7 @@ noValor = function adicionarVar(){
 adicionarVar();
 
 // Qual o retorno da função? (Use comentários de bloco).
-'Valor';
+//'O valor da variável agora é 25';
 
 /*
 Crie uma função com as seguintes características:
@@ -40,21 +40,21 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-function nome(x, y, z){
-  if(x == '' || y == '' || z == ''){
-    return '';
+function newFunction(x, y, z){
+  if(x === undefined || y === undefined || z === undefined){
+    return 'Preencha todos os valores corretamente';
   }
   return (x * y * z) + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-nome(10, 5);
+newFunction(10, 5);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-//'';
+//"Preencha todos os valores corretamente";
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-nome(10, 5, 2);
+newFunction(10, 5, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 //102;
@@ -68,39 +68,23 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function nome2(x, y, z){
-  if(x !== ''){
+function newFunction2( x, y, z ){
+  if( x !== undefined && y === undefined & z === undefined ){
     return x;
-  }
-  if(y !== ''){
-    return y;
-  }
-  if(z !== ''){
-    return z;
-  }
-  if(x !== '' && y !== ''){
+  } else if( x !== undefined && y !== undefined && z === undefined ){
     return x + y;
-  }
-  if(x !== '' && z !== ''){
-    return x + z;
-  }
-  if(y !== '' && z !== ''){
-    return y + z;
-  }
-  if(x != '' && y != '' && z != ''){
-    return (x + y) / z;
-  }
-  if(x == '' && y == '' && z == '') {
+  } else if(z !== undefined){
+    return ( x + y ) / z;
+  } else if(x === undefined){
     return false;
-  }
-  else {
-    return null;
+  } else {
+    return null
   }
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 nome2();             //false
-nome2(20);           //y
-nome2(20, 2);        //z
-nome2(20, 2, 10);    //2,2 ou 2.2
+nome2(20);           //x == 20
+nome2(20, 2);        //x + y == 22
+nome2(20, 2, 10);    //x + y / z == 2,2 ou 2.2
 ```
