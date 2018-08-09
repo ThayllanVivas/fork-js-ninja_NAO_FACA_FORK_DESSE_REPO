@@ -4,29 +4,33 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-?
+function soma(x, y){
+  return x + y;
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var functionSoma = soma(18, 19) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+funtionSoma == 42;
 
 // Declare uma nova variável, sem valor.
-?
+var noValor;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+noValor = function adicionarVar(){
+  return 'Valor';
+}
 
 // Invoque a função criada acima.
-?
+adicionarVar();
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+'Valor';
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +39,24 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function nome(x, y, z){
+  if(x == '' || y == '' || z == ''){
+    return '';
+  }
+  return (x * y * z) + 2;
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+nome(10, 5);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//'';
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+nome(10, 5, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//102;
 
 /*
 Crie uma função com as seguintes características:
@@ -58,8 +67,39 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function nome2(x, y, z){
+  if(x !== ''){
+    return x;
+  }
+  if(y !== ''){
+    return y;
+  }
+  if(z !== ''){
+    return z;
+  }
+  if(x !== '' && y !== ''){
+    return x + y;
+  }
+  if(x !== '' && z !== ''){
+    return x + z;
+  }
+  if(y !== '' && z !== ''){
+    return y + z;
+  }
+  if(x != '' && y != '' && z != ''){
+    return (x + y) / z;
+  }
+  if(x == '' && y == '' && z == '') {
+    return false;
+  }
+  else {
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+nome2();             //false
+nome2(20);           //y
+nome2(20, 2);        //z
+nome2(20, 2, 10);    //2,2 ou 2.2
 ```
